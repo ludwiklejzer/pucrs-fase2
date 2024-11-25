@@ -1,0 +1,129 @@
+body {
+  padding-top: 5em;
+  font-family: sans-serif;
+}
+
+#menu h1 {
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+#menu #cart-counter {
+  position: relative;
+  bottom: 8px;
+  right: 5px;
+  background-color: gray;
+  color: white;
+  border-radius: 100px;
+  padding: 2px 5px;
+  font-size: 0.8em;
+}
+
+#services article,
+#about article {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+#about article li {
+  list-style-type: none !important;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+footer p {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+
+  #products .carousel-control-prev {
+    display: none;
+  }
+
+  #products .carousel-control-next {
+    display: none;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.33333333333333333333333333%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.33333333333333333333333333%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.card {
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.card:hover {
+  transform: scale(0.95);
+  border: 1px solid gray;
+}
+
+.card-img {
+  height: 200px;
+  background-color: #cb997e;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s all;
+}
+
+.card-img img {
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.add-cart {
+  cursor: pointer;
+}
+
+#cart .card-img {
+  height: 100px !important;
+}
+
+#cart #retirada {
+  display: none;
+}
+
+#products .carousel-control-prev {
+  left: -30px;
+  width: 30px;
+}
+
+#products .carousel-control-next {
+  right: -30px;
+  width: 30px;
+}

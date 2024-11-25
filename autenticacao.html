@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Minimercado</title>
+  </head>
+  <body>
+    <header class="sticky-top bg-body-tertiary">
+      <nav id="menu" class="navbar navbar-expand-lg box-shadow">
+        <div class="container d-flex justify-content-between">
+          <h1 class="navbar-brand">
+            <a class="navbar-brand" href="index.html">Minimercado</a>
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Início</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="carrinho.html"
+                  >Carrinho <span id="cart-counter">0</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm" href="autenticacao.html"
+                  >Login/Cadastro</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h2 class="visually-hidden">Contato</h2>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-sm-8 col-lg-4">
+          <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-login-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-login"
+                type="button"
+                role="tab"
+                aria-controls="pills-login"
+                aria-selected="true"
+              >
+                Login
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-register-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-register"
+                type="button"
+                role="tab"
+                aria-controls="pills-register"
+                aria-selected="false"
+              >
+                Cadastrar
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-login"
+              role="tabpanel"
+              aria-labelledby="pills-login-tab"
+              tabindex="0"
+            >
+              <form class="row justify-content-center">
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="nome@exemplo.com"
+                      required
+                    />
+                    <label for="floatingInput">E-mail</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Senha"
+                      required
+                    />
+                    <label for="floatingNome">Senha</label>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary col-6 mx-auto mb-5">
+                  Entrar
+                </button>
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-register"
+              role="tabpanel"
+              aria-labelledby="pills-register-tab"
+              tabindex="0"
+            >
+              <form class="row justify-content-center">
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira seu nome"
+                      required
+                    />
+                    <label for="floatingInput">Nome</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="nome@exemplo.com"
+                      required
+                    />
+                    <label for="floatingInput">E-mail</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Senha"
+                      required
+                    />
+                    <label for="floatingNome">Senha</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira seu CPF"
+                      required
+                    />
+                    <label for="floatingNome">CPF</label>
+                  </div>
+                </div>
+
+                <div class="mt-4 mb-4 col-md-12">
+                  <p>Sexo</p>
+                  <div class="custom-control custom-radio">
+                    <input
+                      id="masculine-genre"
+                      name="genre"
+                      type="radio"
+                      class="custom-control-input"
+                      checked=""
+                      required=""
+                    />
+                    <label class="custom-control-label" for="masculine-genre"
+                      >Masculino</label
+                    >
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input
+                      id="feminine-genre"
+                      name="genre"
+                      type="radio"
+                      class="custom-control-input"
+                      required=""
+                    />
+                    <label class="custom-control-label" for="feminine-genre"
+                      >Feminino</label
+                    >
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input
+                      id="other-genre"
+                      name="genre"
+                      type="radio"
+                      class="custom-control-input"
+                      required=""
+                    />
+                    <label class="custom-control-label" for="other-genre"
+                      >Outro</label
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Insira seu telefone"
+                      required
+                    />
+                    <label for="floatingNome">Telefone</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="checkNews"
+                      checked
+                    />
+                    <label class="form-check-label" for="checkNews">
+                      Deseja receber atualizações de ofertas no e-mail?
+                    </label>
+                  </div>
+                </div>
+
+                <button class="mt-4 btn btn-primary col-6 mx-auto mb-5">
+                  Cadastrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-muted text-center mb-5">
+      <div class="container">
+        <p>Copyright 2024 - Todos os direitos reservados &copy;</p>
+
+        <hr />
+        <address>
+          <p><a href="tel:+5100000000000">(00) 00000-0000</a></p>
+          <p>
+            <a href="mailto:contato@minimercado.com">contato@minimercado.com</a>
+          </p>
+          <p>Avenida Oscar Freire 777 - Centro</p>
+        </address>
+
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="#">Termos de Uso</a> | <a href="#">Privacidade</a>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

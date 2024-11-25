@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Minimercado</title>
+  </head>
+  <body>
+    <header class="sticky-top bg-body-tertiary">
+      <nav id="menu" class="navbar navbar-expand-lg box-shadow">
+        <div class="container d-flex justify-content-between">
+          <h1 class="navbar-brand">
+            <a class="navbar-brand" href="index.html">Minimercado</a>
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Início</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="carrinho.html"
+                  >Carrinho <span id="cart-counter">0</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm" href="autenticacao.html"
+                  >Login/Cadastro</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="products" class="container text-center my-3">
+      <h2 class="mt-5 mb-5 display-6">Destaque</h2>
+
+      <div class="row mx-auto my-auto justify-content-center">
+        <div
+          id="recipeCarousel"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" role="listbox">
+            <article class="carousel-item active">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/maca.png" alt="Maçã Gala" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Maçã Gala</h3>
+                    <p class="card-price">R$6,50</p>
+                    <p class="card-text text-muted text-center">
+                      Maçã fresca, doce e suculenta. Ideal para lanches
+                      saudáveis e receitas
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/alface.png" alt="Alface Crespa" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Alface Crespa</h3>
+                    <p class="card-price">R$2,00</p>
+                    <p class="card-text text-muted text-center">
+                      Alface verde e crocante, perfeita para saladas e
+                      acompanhamentos.
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/macarrao.png" alt="Macarrão Espaguete 500g" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Macarrão Espaguete 500g</h3>
+                    <p class="card-price">R$4,00</p>
+                    <p class="card-text text-muted text-center">
+                      Espaguete tradicional, ideal para pratos com molho de
+                      tomate, bolonhesa e outras receitas italianas
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/oleo.png" alt="Óleo de Soja 900ml" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Óleo de Soja 900ml</h3>
+                    <p class="card-price">R$6,00</p>
+                    <p class="card-text text-muted text-center">
+                      Óleo de soja puro, ideal para frituras e preparações
+                      culinárias diversa.
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="img/papel.png"
+                      alt="Papel Higiênico com 2 unidades"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Papel Higiênico c/ 2 unidades</h3>
+                    <p class="card-price">R$21,90</p>
+                    <p class="card-text text-muted text-center">
+                      Papel higiênico de folha dupla, macio e de alta qualidade.
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-img">
+                    <img
+                      src="img/desinfetante.png"
+                      alt="Desinfetante Floral 500ml"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Desinfetante Floral 500ml</h3>
+                    <p class="card-price">R$3,50</p>
+                    <p class="card-text text-muted text-center">
+                      Desinfetante com aroma floral, ideal para higienização de
+                      pisos, banheiros e superfícies em geral.
+                    </p>
+                    <button class="btn btn-primary add-cart">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <a
+            class="carousel-control-prev bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a
+            class="carousel-control-next bg-transparent w-aut"
+            href="#recipeCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <h2 class="mt-5 mb-5 display-6">Produtos</h2>
+
+      <div class="row row-gap-4 mx-auto my-auto justify-content-center">
+        <article class="col-md-4">
+          <div class="card">
+            <div class="card-img">
+              <img src="img/pera.png" alt="Pera" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pera 1kg</h3>
+              <p class="card-price">R$14,90</p>
+              <p class="card-text text-muted text-center">
+                Suculenta e cheia de sabor, a pera é perfeita para lanches
+                saudáveis ou sobremesas refrescantes.
+              </p>
+              <button class="btn btn-primary add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-md-4">
+          <div class="card">
+            <div class="card-img">
+              <img src="img/escova_dente.png" alt="Escova de dente" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Escova de Dente</h3>
+              <p class="card-price">R$8,50</p>
+              <p class="card-text text-muted text-center">
+                Cerdas macias para uma limpeza eficaz e cuidado diário com sua
+                saúde bucal.
+              </p>
+              <button class="btn btn-primary add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-md-4">
+          <div class="card">
+            <div class="card-img">
+              <img src="img/tomate.png" alt="Tomate Longa Vida 1kg" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Tomate Longa Vida 1kg</h3>
+              <p class="card-price">R$8,50</p>
+              <p class="card-text text-muted text-center">
+                Fresco e versátil, o tomate é ideal para saladas, molhos e
+                receitas cheias de sabor.
+              </p>
+              <button class="btn btn-primary add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-md-4">
+          <div class="card">
+            <div class="card-img">
+              <img src="img/cafe.png" alt="Café 500g" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Café 500g</h3>
+              <p class="card-price">R$21,99</p>
+              <p class="card-text text-muted text-center">
+                Aroma intenso e sabor marcante, o café perfeito para começar bem
+                o seu dia.
+              </p>
+              <button class="btn btn-primary add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-md-4">
+          <div class="card">
+            <div class="card-img">
+              <img src="img/arroz.png" alt="Arroz Branco 1kg" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Arroz Branco 1kg</h3>
+              <p class="card-price">R$7,99</p>
+              <p class="card-text text-muted text-center">
+                Grãos selecionados que garantem refeições leves, deliciosas e
+                nutritivas.
+              </p>
+              <button class="btn btn-primary add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="container">
+      <h2 class="visually-hidden">Serviços</h2>
+
+      <article class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h3 class="display-5 text-center">Tele-Entrega</h3>
+          <p class="lead text-muted text-center">
+            Receba suas compras no conforto da sua casa!
+          </p>
+          <ul>
+            <li>
+              <strong>Áreas de entrega:</strong> Centro, Vila Nova, Jardim das
+              Flores, Parque das Águas
+            </li>
+            <li>
+              <strong>Taxa de entrega:</strong> R$ 5,00 para pedidos acima de R$
+              30,00. Gratuita para pedidos acima de R$ 50,00.
+            </li>
+            <li>
+              <strong>Horário de entrega:</strong> Segunda a sexta-feira, das 9h
+              às 21h. Sábados, das 9h às 18h. Não funcionamos domingos e
+              feriados.
+            </li>
+          </ul>
+          <p class="text-center">
+            <strong>Entregamos para todo o bairro em até 1 hora.</strong>
+          </p>
+        </div>
+      </article>
+
+      <article class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h3 class="display-5 text-center">Retirada no local</h3>
+          <p class="lead text-muted text-center">
+            Retire suas compras em nossa loja e ganhe 10% de desconto na sua
+            próxima compra!
+          </p>
+          <ul>
+            <li>
+              <strong>Endereço:</strong> Avenida Oscar Freire 777 - Centro.
+            </li>
+            <li>
+              <strong>Horário de funcionamento:</strong> Segunda a sexta-feira,
+              das 8h às 20h. Sábados, das 8h às 19h. Domingos e feriados,
+              fechado.
+            </li>
+            <li>
+              <strong>Como retirar:</strong> Apresentar o número do pedido no
+              caixa da loja.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <footer class="text-muted text-center mb-5">
+      <div class="container">
+        <p>Copyright 2024 - Todos os direitos reservados &copy;</p>
+
+        <hr />
+        <address>
+          <p><a href="tel:+5100000000000">(00) 00000-0000</a></p>
+          <p>
+            <a href="mailto:contato@minimercado.com">contato@minimercado.com</a>
+          </p>
+          <p>Avenida Oscar Freire 777 - Centro</p>
+        </address>
+
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="#">Termos de Uso</a> | <a href="#">Privacidade</a>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
