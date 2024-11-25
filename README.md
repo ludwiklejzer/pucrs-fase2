@@ -1,4 +1,4 @@
-# PUCRS - Fundamentos de Sistemas Web | Escritório de Projetos - Fase 1
+# PUCRS - Fundamentos de Sistemas Web | Escritório de Projetos - Fase 2
 
 ## Funcionalidades Gerais
 
